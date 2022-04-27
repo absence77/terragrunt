@@ -1,16 +1,3 @@
-terraform {  
-  backend "s3" {
-    # Replace this with your bucket name!
-    bucket = "ecs-ha-tfstate-test"
-    key    = "dev/tfstate"
-    region = "eu-central-1"
-  }
-}
-
-provider "aws" {
-  region = "eu-central-1"
-}
-
 
 module "aws_network" {
   source               = "./modules/aws_network"
